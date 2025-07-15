@@ -3,83 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educação Alimentar - Combatendo a obesidade infantil no Brasil</title>
+    <title>Educação Alimentar</title>
     <link rel="stylesheet" href="styles_educacao_alimentar.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Botão de voltar -->
-        <a href="index.html" class="back-button">
+    <div class="pagina">
+        <!-- Botão de voltar - mudei a classe para "btn-voltar" -->
+        <a href="index.html" class="btn-voltar">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
                 <polyline points="12 19 5 12 12 5"></polyline>
             </svg>
         </a>
 
-        <!-- Cabeçalho -->
-        <header class="header">
+        <!-- Cabeçalho - mudei a classe para "topo" -->
+        <div class="topo">
             <h1>EDUCAÇÃO ALIMENTAR</h1>
             <h2>Transformando o futuro das novas gerações</h2>
             <h3>Os desafios para combater a obesidade infantil no Brasil</h3>
-        </header>
+        </div>
 
-        <!-- Cartaz -->
-        <section class="poster-section">
-            <img src="./img/Educacao alimentar.jpg" alt="Cartaz sobre Educação Alimentar" class="poster-image">
-        </section>
+        <!-- Cartaz - mudei a classe para "cartaz" -->
+        <div class="cartaz">
+            <img src="./img/Educacao alimentar.jpg" alt="Cartaz sobre Educação Alimentar" class="img-cartaz bounce-in-top">
+        </div>
 
-        <!-- Argumentos -->
-        <section class="arguments-section">
-            <div class="argument-nav">
-                <a href="#autoridade" class="argument-btn">Autoridade</a>
-                <a href="#historico" class="argument-btn">Histórico</a>
-                <a href="#exemplificacao" class="argument-btn">Exemplificação</a>
-                <a href="#comparacao" class="argument-btn">Comparação</a>
-                <a href="#logico" class="argument-btn">Lógico</a>
-                <a href="#causa" class="argument-btn">Causa/Consequência</a>
+        <!-- Argumentos - mudei classes aqui -->
+        <div class="argumentos">
+            <div class="menu-argumentos">
+                <a href="#autoridade" class="btn-arg">Autoridade</a>
+                <a href="#historico" class="btn-arg">Histórico</a>
+                <a href="#exemplificacao" class="btn-arg">Exemplificação</a>
+                <a href="#comparacao" class="btn-arg">Comparação</a>
+                <a href="#logico" class="btn-arg">Lógico</a>
+                <a href="#causa" class="btn-arg">Causa/Consequência</a>
             </div>
 
-            <article id="autoridade" class="argument-card">
+            <div id="autoridade" class="card-arg">
                 <h3>Argumento de Autoridade</h3>
                 <p>Especialistas em nutrição, como a renomada Dra. Maria Silva, defendem que a educação nutricional deve envolver tanto as escolas quanto as famílias para ser verdadeiramente eficaz. De acordo com um estudo publicado pela Sociedade Brasileira de Pediatria, os melhores resultados em termos de mudança de hábitos alimentares nas crianças foram observados em famílias que receberam informações complementares sobre nutrição, além da educação alimentar escolar.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="historico" class="argument-card">
+            <div id="historico" class="card-arg">
                 <h3>Argumento Histórico</h3>
                 <p>Historicamente, países como Japão e Finlândia adotaram a educação nutricional formal em suas escolas há décadas, com resultados notáveis na saúde pública. O Japão, por exemplo, implementou um currículo nacional de nutrição nas escolas desde a década de 1940, o que ajudou a reduzir consideravelmente a taxa de obesidade infantil ao longo das gerações.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="exemplificacao" class="argument-card">
+            <div id="exemplificacao" class="card-arg">
                 <h3>Argumento de Exemplificação</h3>
                 <p>Um exemplo prático pode ser encontrado em programas educativos que ensinam adolescentes a ler e compreender os rótulos dos alimentos. Em algumas escolas, alunos têm aprendido a identificar os níveis de açúcar, sódio e gordura em produtos alimentícios. Um estudo realizado com adolescentes em escolas de São Paulo mostrou redução de 30% no consumo de alimentos processados após implementação de programas de educação nutricional.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="comparacao" class="argument-card">
+            <div id="comparacao" class="card-arg">
                 <h3>Argumento de Comparação</h3>
                 <p>Comparando dois cenários, em escolas que promovem atividades educativas sobre alimentação saudável, os estudantes têm uma maior consciência sobre a escolha de alimentos. Em contraste, em escolas que não implementam tais programas, os estudantes tendem a adotar hábitos alimentares prejudiciais, como o consumo excessivo de fast food e refrigerantes.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="logico" class="argument-card">
+            <div id="logico" class="card-arg">
                 <h3>Argumento de Raciocínio Lógico</h3>
                 <p>Se as escolas públicas brasileiras não oferecem uma educação alimentar adequada, as crianças não aprendem sobre os efeitos de uma alimentação inadequada, o que leva ao aumento da obesidade infantil. Sem conscientização sobre dieta equilibrada, as crianças frequentemente optam por alimentos ricos em calorias e pobres em nutrientes.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="causa" class="argument-card">
+            <div id="causa" class="card-arg">
                 <h3>Argumento de Causa e Consequência</h3>
                 <p>A implementação de programas de educação alimentar nas escolas causa uma redução significativa no consumo de alimentos ultraprocessados entre crianças e adolescentes. Quando as escolas oferecem informações sobre os impactos dos alimentos ultraprocessados, os alunos passam a entender os malefícios, resultando em escolhas mais conscientes.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
-        </section>
+                <a href="#" class="voltar-topo">Voltar ao topo</a>
+            </div>
+        </div>
 
-        <!-- Rodapé -->
+        <!-- Rodapé - mantive igual -->
         <footer>
             <p>© 2025 Temas Transversais - Todos os direitos reservados</p>
             <p>Feito por Guilherme Bello e Mário Biluk - 2º ano Desenvolvimento de Sistemas</p>

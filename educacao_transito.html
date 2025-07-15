@@ -3,86 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educação para o Trânsito - Desafios da conscientização no Brasil</title>
+    <title>Educação para o Trânsito</title>
     <link rel="stylesheet" href="styles_transito.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Botão de voltar -->
-        <a href="index.html" class="back-button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-        </a>
+    <div class="pagina">
+       <!-- BOTÃO DE VOLTAR (ESTILO IGUAL ÀS OUTRAS PÁGINAS) -->
+       <a href="index.html" class="btn-voltar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </a>
 
-        <!-- Cabeçalho -->
-        <header class="header">
+        <!-- Cabeçalho - mudei para cabecalho -->
+        <div class="cabecalho">
             <h1>EDUCAÇÃO PARA O TRÂNSITO</h1>
             <h2>Os desafios da conscientização no Brasil</h2>
-        </header>
+        </div>
 
-        <!-- Cartaz -->
-        <section class="poster-section">
-            <img src="./img/Educação para o Trânsito.jpg" alt="Cartaz sobre Educação para o Trânsito" class="poster-image">
-        </section>
+        <!-- Cartaz - mudei para cartaz -->
+        <div class="cartaz">
+            <img src="./img/Educação para o Trânsito.jpg" alt="Cartaz sobre Educação para o Trânsito" class="img-cartaz puff-in-center">
+        </div>
 
-        <!-- Argumentos -->
-        <section class="arguments-section">
-            <div class="argument-nav">
-                <a href="#autoridade" class="argument-btn">Autoridade</a>
-                <a href="#historico" class="argument-btn">Histórico</a>
-                <a href="#exemplificacao" class="argument-btn">Exemplificação</a>
-                <a href="#comparacao" class="argument-btn">Comparação</a>
-                <a href="#logico" class="argument-btn">Lógico</a>
-                <a href="#causa" class="argument-btn">Causa/Consequência</a>
+        <!-- Argumentos - mudei varias classes aqui -->
+        <div class="argumentos">
+            <div class="menu-arg">
+                <a href="#autoridade" class="btn-arg">Autoridade</a>
+                <a href="#historico" class="btn-arg">Histórico</a>
+                <a href="#exemplificacao" class="btn-arg">Exemplificação</a>
+                <a href="#comparacao" class="btn-arg">Comparação</a>
+                <a href="#logico" class="btn-arg">Lógico</a>
+                <a href="#causa" class="btn-arg">Causa/Consequência</a>
             </div>
 
-            <article id="autoridade" class="argument-card">
+            <div id="autoridade" class="card-arg">
                 <h3>Argumento de Autoridade</h3>
                 <p>Segundo a Organização Mundial da Saúde (OMS), o trânsito é uma das principais causas de morte no mundo, sendo responsável por cerca de 1,3 milhão de óbitos anuais. Especialistas afirmam que políticas educativas eficazes são fundamentais para reduzir esses números, tornando condutores e pedestres mais conscientes sobre seu papel na segurança viária.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="historico" class="argument-card">
+            <div id="historico" class="card-arg">
                 <h3>Argumento Histórico</h3>
                 <p>No Brasil, a obrigatoriedade do uso do cinto de segurança foi estabelecida em 1997 com a criação do Código de Trânsito Brasileiro (CTB). Antes disso, o número de mortes no trânsito era ainda maior. Esta medida demonstrou que educação e legislação podem transformar hábitos e salvar vidas, reforçando a importância de novas estratégias educativas.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="exemplificacao" class="argument-card">
+            <div id="exemplificacao" class="card-arg">
                 <h3>Argumento de Exemplificação</h3>
                 <p>Diariamente, vemos casos de motoristas que desrespeitam sinais vermelhos, ultrapassam em locais proibidos ou dirigem alcoolizados. Um exemplo notório foi o acidente causado por um condutor embriagado em São Paulo, que resultou na morte de uma família inteira. Estes casos ilustram a necessidade urgente de formação mais rigorosa e campanhas educativas contínuas.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="comparacao" class="argument-card">
+            <div id="comparacao" class="card-arg">
                 <h3>Argumento de Comparação</h3>
                 <p>Países como Suécia e Holanda reduziram drasticamente o número de mortes no trânsito ao investir em programas educativos e infraestrutura segura. No Brasil, no entanto, a alta taxa de mortalidade no trânsito ainda é reflexo da negligência com a educação viária, demonstrando a necessidade de mudanças urgentes neste setor.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="logico" class="argument-card">
+            <div id="logico" class="card-arg">
                 <h3>Argumento de Raciocínio Lógico</h3>
                 <p>Se a falta de conhecimento sobre as leis de trânsito leva a comportamentos imprudentes, então a implementação de educação obrigatória desde a escola deve formar cidadãos mais responsáveis no trânsito, reduzindo acidentes e fatalidades. Portanto, a educação viária é investimento essencial para segurança pública.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
 
-            <article id="causa" class="argument-card">
+            <div id="causa" class="card-arg">
                 <h3>Argumento de Causa e Consequência</h3>
                 <p>A ausência de educação contínua sobre segurança viária faz com que muitos condutores e pedestres desconheçam ou ignorem as normas de trânsito. Como consequência, o Brasil registra altos índices de acidentes e mortes nas vias. Sem medidas educativas rigorosas, esta situação tende a se agravar, impactando vítimas, sistema de saúde e economia do país.</p>
-                <a href="#" class="back-to-top">Voltar ao topo</a>
-            </article>
-        </section>
+                <a href="#" class="link-topo">Voltar ao topo</a>
+            </div>
+        </div>
 
-        <!-- Recortes Temáticos -->
-        <section class="themes-section">
+        <!-- Recortes Temáticos - mudei classes aqui -->
+        <div class="temas">
             <h3>Recortes Temáticos para Redação</h3>
-            <div class="themes-grid">
-                <div class="theme-card">
+            <div class="grid-temas">
+                <div class="card-tema">
                     <h4>Educação nas Escolas</h4>
                     <ul>
                         <li>Negligência com educação viária</li>
@@ -90,7 +88,7 @@
                         <li>Conscientização desde cedo</li>
                     </ul>
                 </div>
-                <div class="theme-card">
+                <div class="card-tema">
                     <h4>Campanhas Públicas</h4>
                     <ul>
                         <li>Eficácia na mudança de comportamento</li>
@@ -98,7 +96,7 @@
                         <li>Comunicação eficiente</li>
                     </ul>
                 </div>
-                <div class="theme-card">
+                <div class="card-tema">
                     <h4>Impacto Coletivo</h4>
                     <ul>
                         <li>Vítimas de acidentes</li>
@@ -107,9 +105,9 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Rodapé -->
+        <!-- Rodapé - mantive igual -->
         <footer>
             <p>© 2025 Temas Transversais - Todos os direitos reservados</p>
             <p>Feito por Guilherme Bello e Mário Biluk - 2º ano Desenvolvimento de Sistemas</p>

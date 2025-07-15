@@ -1,43 +1,70 @@
-/* Cores baseadas no cartaz de Cibersegurança - tons tecnológicos e digitais */
+/* Cores */
 :root {
     --azul-escuro: #0A2463;
-    --azul-ciber: #3E92CC;
-    --roxo-tecnologico: #6E44FF;
-    --ciano: #00C2D1;
+    --azul-claro: #3E92CC;
+    --roxo: #6E44FF;
+    --azul-verde: #00C2D1;
     --cinza-escuro: #2E2E2E;
     --cinza-claro: #ECECEC;
     --branco: #FFFFFF;
 }
 
-/* Reset e estilos gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos gerais */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--cinza-claro);
+    background: var(--cinza-claro);
     color: var(--cinza-escuro);
     line-height: 1.6;
-    max-width: 390px;
+    max-width: 800px;
     margin: 0 auto;
-    min-height: 844px;
-    position: relative;
     padding-bottom: 60px;
 }
 
-.container {
-    padding: 20px;
+.slide-in-elliptic-top-fwd {
+	-webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-/* Botão de voltar */
-.back-button {
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+  }
+  
+
+/* ESTILO DO BOTÃO DE VOLTAR (IGUAL ÀS OUTRAS PÁGINAS) */
+.voltar{
     position: fixed;
     top: 15px;
     left: 15px;
-    background-color: var(--azul-ciber);
+    background: var(--vermelho); /* Cor vermelha padrão */
     color: white;
     width: 40px;
     height: 40px;
@@ -47,187 +74,166 @@ body {
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-.back-button:hover {
+.voltar:hover{
     transform: scale(1.1);
-    background-color: var(--roxo-tecnologico);
+    background: var(--azul); /* Muda para azul no hover */
 }
+
+
+
 
 /* Cabeçalho */
-.header {
+.topo {
     text-align: center;
     margin-bottom: 25px;
     padding-top: 40px;
 }
 
-.header h1 {
+.topo h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
     color: var(--azul-escuro);
     margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
-.header h2 {
+.topo h2 {
     font-size: 1.1rem;
-    color: var(--roxo-tecnologico);
-    font-weight: 600;
-    line-height: 1.4;
+    color: var(--roxo);
 }
 
-/* Seção do cartaz */
-.poster-section {
+/* Imagem */
+.banner {
     margin: 20px 0;
     text-align: center;
 }
 
-.poster-image {
+.banner img {
     max-width: 100%;
     height: 550px;
     border-radius: 10px;
+    border: 2px solid var(--azul-verde);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 2px solid var(--ciano);
 }
 
-/* Navegação de argumentos */
-.argument-nav {
+/* Menu de argumentos */
+.menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 25px 0;
 }
 
-.argument-btn {
-    background-color: var(--azul-ciber);
+.menu a {
+    background: var(--azul-claro);
     color: white;
     padding: 12px 8px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.argument-btn:nth-child(3n+1) {
-    background-color: var(--roxo-tecnologico);
-}
+.menu a:nth-child(3n+1) { background: var(--roxo); }
+.menu a:nth-child(3n+2) { background: var(--azul-verde); color: var(--cinza-escuro); }
+.menu a:nth-child(3n+3) { background: var(--azul-escuro); }
 
-.argument-btn:nth-child(3n+2) {
-    background-color: var(--ciano);
-    color: var(--cinza-escuro);
-}
-
-.argument-btn:nth-child(3n+3) {
-    background-color: var(--azul-escuro);
-}
-
-.argument-btn:hover {
+.menu a:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* Cards de argumentos */
-.arguments-section {
+/* Argumentos */
+.argumentos {
     margin-top: 20px;
 }
 
-.argument-card {
-    background-color: var(--branco);
+.box {
+    background: white;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 5px solid var(--azul-ciber);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--azul-claro);
     display: none;
 }
 
-.argument-card:target {
+.box:target {
     display: block;
-    animation: fadeIn 0.5s ease-out;
+    animation: aparecer 0.5s;
 }
 
-@keyframes fadeIn {
+@keyframes aparecer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-.argument-card h3 {
+.box h3 {
     color: var(--azul-escuro);
     font-size: 1.4rem;
     margin-bottom: 15px;
-    font-weight: 700;
 }
 
-.argument-card p {
+.box p {
     font-size: 1.1rem;
-    line-height: 1.5;
-    color: var(--cinza-escuro);
     margin-bottom: 20px;
 }
 
-.back-to-top {
+.topo-link {
     display: inline-block;
     padding: 8px 16px;
-    background-color: var(--azul-ciber);
+    background: var(--azul-claro);
     color: white;
     border-radius: 20px;
-    font-size: 0.9rem;
     text-decoration: none;
-    transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-    background-color: var(--roxo-tecnologico);
+.topo-link:hover {
+    background: var(--roxo);
 }
 
-/* Seções de intervenção e fatos */
-.intervention-section, .facts-section {
-    background-color: var(--branco);
+/* Listas */
+.propostas, .dados {
+    background: white;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.intervention-section h3, .facts-section h3 {
+.propostas h3, .dados h3 {
     color: var(--azul-escuro);
     font-size: 1.4rem;
     margin-bottom: 15px;
-    font-weight: 700;
-    border-bottom: 2px solid var(--ciano);
+    border-bottom: 2px solid var(--azul-verde);
     padding-bottom: 8px;
 }
 
-.intervention-section ul, .facts-section ul {
+.lista {
     padding-left: 20px;
 }
 
-.intervention-section li, .facts-section li {
+.lista li {
     margin-bottom: 10px;
-    line-height: 1.5;
 }
 
 /* Rodapé */
-footer {
+.rodape {
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
     color: var(--azul-escuro);
-    font-size: 0.9rem;
 }
 
-footer p:first-child {
+.rodape p:first-child {
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-.hashtags {
+.tags {
     margin-top: 15px;
     display: flex;
     justify-content: center;
@@ -235,35 +241,10 @@ footer p:first-child {
     flex-wrap: wrap;
 }
 
-.hashtags span {
-    background-color: var(--cinza-claro);
+.tags span {
+    background: var(--cinza-claro);
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.8rem;
     color: var(--azul-escuro);
-}
-
-/* Responsividade */
-@media (max-width: 390px) {
-    .container {
-        padding: 15px;
-    }
-    
-    .argument-nav {
-        grid-template-columns: 1fr;
-    }
-    
-    .header h1 {
-        font-size: 2rem;
-    }
-    
-    .header h2 {
-        font-size: 1rem;
-    }
-    
-    .hashtags {
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-    }
 }

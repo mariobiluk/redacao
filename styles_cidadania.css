@@ -1,43 +1,74 @@
-/* Cores temáticas para cidadania e civismo */
+/* Cores simplificadas */
 :root {
-    --azul-civismo: #1565C0;
+    --azul: #1565C0;
     --azul-claro: #42A5F5;
-    --vermelho-cidadania: #D32F2F;
+    --vermelho: #D32F2F;
     --laranja: #FB8C00;
-    --cinza-claro: #F5F5F5;
+    --fundo: #F5F5F5;
     --branco: #FFFFFF;
     --preto: #212121;
 }
 
-/* Reset e estilos gerais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos básicos */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: var(--cinza-claro);
+    background: var(--fundo);
     color: var(--preto);
     line-height: 1.6;
-    max-width: 390px;
+    max-width: 800px;
     margin: 0 auto;
-    min-height: 844px;
-    position: relative;
-    padding-bottom: 60px;
+    padding: 0 15px 60px;
 }
 
-.container {
-    padding: 20px;
+.roll-in-blurred-left {
+	-webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
-/* Botão de voltar */
-.back-button {
+@-webkit-keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes roll-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) rotate(-720deg);
+              transform: translateX(-1000px) rotate(-720deg);
+      -webkit-filter: blur(50px);
+              filter: blur(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+              transform: translateX(0) rotate(0deg);
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+
+.pagina {
+    padding: 20px 0;
+}
+
+/* Botão voltar */
+.btn-volta {
     position: fixed;
     top: 15px;
     left: 15px;
-    background-color: var(--azul-civismo);
+    background: var(--azul);
     color: white;
     width: 40px;
     height: 40px;
@@ -47,240 +78,195 @@ body {
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
-    transition: all 0.3s ease;
 }
 
-.back-button:hover {
+.btn-volta:hover {
+    background: var(--vermelho);
     transform: scale(1.1);
-    background-color: var(--vermelho-cidadania);
 }
 
 /* Cabeçalho */
-.header {
+.topo {
     text-align: center;
     margin-bottom: 25px;
     padding-top: 40px;
 }
 
-.header h1 {
+.topo h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--azul-civismo);
+    font-size: 2rem;
+    color: var(--azul);
     margin-bottom: 10px;
-    text-transform: uppercase;
 }
 
-.header h2 {
-    font-size: 1.2rem;
-    color: var(--vermelho-cidadania);
-    font-weight: 600;
+.topo h2 {
+    font-size: 1.1rem;
+    color: var(--vermelho);
     margin-bottom: 8px;
 }
 
-.header h3 {
-    font-size: 1rem;
-    color: var(--preto);
-    font-weight: 400;
+.topo h3 {
+    font-size: 0.9rem;
 }
 
-/* Seção do cartaz */
-.poster-section {
+/* Imagem */
+.imagem-principal {
     margin: 20px 0;
     text-align: center;
 }
 
-.poster-image {
+.imagem-principal img {
     max-width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 3px solid var(--laranja);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Navegação de argumentos */
-.argument-nav {
+/* Menu de argumentos */
+.menu-argumentos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     margin: 25px 0;
 }
 
-.argument-btn {
-    background-color: var(--azul-civismo);
+.btn-arg {
+    background: var(--azul);
     color: white;
     padding: 12px 8px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-weight: bold;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.argument-btn:nth-child(3n+1) {
-    background-color: var(--vermelho-cidadania);
-}
+.btn-arg:nth-child(3n+1) { background: var(--vermelho); }
+.btn-arg:nth-child(3n+2) { background: var(--laranja); }
+.btn-arg:nth-child(3n+3) { background: var(--azul-claro); color: var(--preto); }
 
-.argument-btn:nth-child(3n+2) {
-    background-color: var(--laranja);
-}
-
-.argument-btn:nth-child(3n+3) {
-    background-color: var(--azul-claro);
-    color: var(--preto);
-}
-
-.argument-btn:hover {
+.btn-arg:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
-/* Cards de argumentos */
-.arguments-section {
+/* Argumentos */
+.argumentos {
     margin-top: 20px;
 }
 
-.argument-card {
-    background-color: var(--branco);
+.card-arg {
+    background: white;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 5px solid var(--azul-civismo);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid var(--azul);
     display: none;
 }
 
-.argument-card:target {
+.card-arg:target {
     display: block;
-    animation: fadeIn 0.5s ease-out;
+    animation: aparecer 0.5s;
 }
 
-@keyframes fadeIn {
+@keyframes aparecer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-.argument-card h3 {
-    color: var(--azul-civismo);
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.argument-card p, .argument-card ul {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: var(--preto);
+.card-arg h3 {
+    color: var(--azul);
+    font-size: 1.3rem;
     margin-bottom: 15px;
 }
 
-.argument-card blockquote {
+.card-arg p {
+    margin-bottom: 15px;
+}
+
+.card-arg blockquote {
     font-style: italic;
     border-left: 3px solid var(--laranja);
     padding-left: 15px;
     margin: 15px 0;
-    color: var(--preto);
 }
 
-.argument-card blockquote footer {
+.card-arg blockquote footer {
     font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
     margin-top: 5px;
-    color: var(--vermelho-cidadania);
+    color: var(--vermelho);
 }
 
-.back-to-top {
+.volta-topo {
     display: inline-block;
     padding: 8px 16px;
-    background-color: var(--azul-civismo);
+    background: var(--azul);
     color: white;
     border-radius: 20px;
-    font-size: 0.9rem;
     text-decoration: none;
-    transition: background-color 0.3s;
 }
 
-.back-to-top:hover {
-    background-color: var(--vermelho-cidadania);
+.volta-topo:hover {
+    background: var(--vermelho);
 }
 
-/* Seção de desafios */
-.challenges-section {
+/* Desafios */
+.desafios {
     margin-top: 30px;
 }
 
-.challenges-section h3 {
-    color: var(--azul-civismo);
-    font-size: 1.4rem;
+.desafios h3 {
+    color: var(--azul);
+    font-size: 1.3rem;
     margin-bottom: 15px;
     text-align: center;
-    font-weight: 700;
 }
 
-.challenges-grid {
+.cards-desafios {
     display: grid;
-    grid-template-columns: 1fr;
     gap: 15px;
 }
 
-.challenge-card {
-    background-color: var(--branco);
+.card-desafio {
+    background: white;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     border-top: 4px solid var(--laranja);
 }
 
-.challenge-card h4 {
-    color: var(--vermelho-cidadania);
+.card-desafio h4 {
+    color: var(--vermelho);
     font-size: 1.1rem;
     margin-bottom: 10px;
-    font-weight: 600;
 }
 
-.challenge-card ul {
+.card-desafio ul {
     padding-left: 20px;
 }
 
-.challenge-card li {
+.card-desafio li {
     margin-bottom: 8px;
-    font-size: 0.95rem;
 }
 
 /* Rodapé */
-footer {
+.rodape {
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    color: var(--azul-civismo);
-    font-size: 0.9rem;
+    color: var(--azul);
 }
 
-footer p:first-child {
+.rodape p:first-child {
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: bold;
 }
 
-/* Responsividade */
+/* Celular */
 @media (max-width: 390px) {
-    .container {
-        padding: 15px;
-    }
-    
-    .argument-nav {
+    .menu-argumentos {
         grid-template-columns: 1fr;
-    }
-    
-    .header h1 {
-        font-size: 2rem;
-    }
-    
-    .header h2 {
-        font-size: 1.1rem;
-    }
-    
-    .header h3 {
-        font-size: 0.9rem;
     }
 }

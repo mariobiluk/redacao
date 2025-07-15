@@ -1,4 +1,4 @@
-/* Cores baseadas no cartaz de Educação Alimentar */
+/* Cores */
 :root {
     --verde-escuro: #2E7D32;
     --verde-claro: #4CAF50;
@@ -10,7 +10,7 @@
     --preto: #212121;
 }
 
-/* Reset e estilos gerais */
+/* Estilos gerais */
 * {
     margin: 0;
     padding: 0;
@@ -18,27 +18,136 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--cinza-claro);
-    color: var(--preto);
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #F5F5F5;
+    color: #212121;
     line-height: 1.6;
-    max-width: 390px;
+    max-width: 800px;
     margin: 0 auto;
-    min-height: 844px;
-    position: relative;
     padding-bottom: 60px;
 }
 
-.container {
+.bounce-in-top {
+	-webkit-animation: bounce-in-top 1.1s both;
+	        animation: bounce-in-top 1.1s both;
+}
+
+@-webkit-keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes bounce-in-top {
+    0% {
+      -webkit-transform: translateY(-500px);
+              transform: translateY(-500px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+      opacity: 0;
+    }
+    38% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+      opacity: 1;
+    }
+    55% {
+      -webkit-transform: translateY(-65px);
+              transform: translateY(-65px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    72% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    81% {
+      -webkit-transform: translateY(-28px);
+              transform: translateY(-28px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    90% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    95% {
+      -webkit-transform: translateY(-8px);
+              transform: translateY(-8px);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
+.pagina {
     padding: 20px;
 }
 
 /* Botão de voltar */
-.back-button {
+.btn-voltar {
     position: fixed;
     top: 15px;
     left: 15px;
-    background-color: var(--verde-claro);
+    background: #4CAF50;
     color: white;
     width: 40px;
     height: 40px;
@@ -48,148 +157,145 @@ body {
     justify-content: center;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     z-index: 100;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-.back-button:hover {
+.btn-voltar:hover {
     transform: scale(1.1);
-    background-color: var(--laranja);
+    background: #FF9800;
 }
 
 /* Cabeçalho */
-.header {
+.topo {
     text-align: center;
     margin-bottom: 25px;
     padding-top: 40px;
 }
 
-.header h1 {
+.topo h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.2rem;
-    font-weight: 700;
-    color: var(--verde-escuro);
+    font-weight: bold;
+    color: #2E7D32;
     margin-bottom: 10px;
     text-transform: uppercase;
 }
 
-.header h2 {
+.topo h2 {
     font-size: 1.2rem;
-    color: var(--laranja);
+    color: #FF9800;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
-.header h3 {
+.topo h3 {
     font-size: 1rem;
-    color: var(--preto);
-    font-weight: 400;
+    color: #212121;
 }
 
-/* Seção do cartaz */
-.poster-section {
+/* Cartaz */
+.cartaz {
     margin: 20px 0;
     text-align: center;
 }
 
-.poster-image {
+.img-cartaz {
     max-width: 100%;
     height: 550px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 3px solid var(--amarelo);
+    border: 3px solid #FFC107;
 }
 
-/* Navegação de argumentos */
-.argument-nav {
+/* Menu de argumentos */
+.menu-argumentos {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 12px;
     margin: 25px 0;
 }
 
-.argument-btn {
-    background-color: var(--verde-claro);
+.btn-arg {
+    background: #4CAF50;
     color: white;
     padding: 12px 8px;
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: 0.3s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.argument-btn:nth-child(3n+1) {
-    background-color: var(--laranja);
+.btn-arg:nth-child(3n+1) {
+    background: #FF9800;
 }
 
-.argument-btn:nth-child(3n+2) {
-    background-color: var(--amarelo);
-    color: var(--preto);
+.btn-arg:nth-child(3n+2) {
+    background: #FFC107;
+    color: #212121;
 }
 
-.argument-btn:nth-child(3n+3) {
-    background-color: var(--vermelho);
+.btn-arg:nth-child(3n+3) {
+    background: #F44336;
 }
 
-.argument-btn:hover {
+.btn-arg:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 
 /* Cards de argumentos */
-.arguments-section {
+.argumentos {
     margin-top: 20px;
 }
 
-.argument-card {
-    background-color: var(--branco);
+.card-arg {
+    background: white;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 25px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-left: 5px solid var(--verde-claro);
+    border-left: 5px solid #4CAF50;
     display: none;
 }
 
-.argument-card:target {
+.card-arg:target {
     display: block;
-    animation: fadeIn 0.5s ease-out;
+    animation: aparecer 0.5s;
 }
 
-@keyframes fadeIn {
+@keyframes aparecer {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-.argument-card h3 {
-    color: var(--verde-escuro);
+.card-arg h3 {
+    color: #2E7D32;
     font-size: 1.4rem;
     margin-bottom: 15px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
-.argument-card p {
+.card-arg p {
     font-size: 1.1rem;
     line-height: 1.5;
-    color: var(--preto);
     margin-bottom: 20px;
 }
 
-.back-to-top {
+.voltar-topo {
     display: inline-block;
     padding: 8px 16px;
-    background-color: var(--verde-claro);
+    background: #4CAF50;
     color: white;
     border-radius: 20px;
     font-size: 0.9rem;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: 0.3s;
 }
 
-.back-to-top:hover {
-    background-color: var(--laranja);
+.voltar-topo:hover {
+    background: #FF9800;
 }
 
 /* Rodapé */
@@ -197,7 +303,7 @@ footer {
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    color: var(--verde-escuro);
+    color: #2E7D32;
     font-size: 0.9rem;
 }
 
@@ -206,21 +312,21 @@ footer p:first-child {
     font-weight: 600;
 }
 
-/* Responsividade */
+/* Responsivo */
 @media (max-width: 390px) {
-    .container {
+    .pagina {
         padding: 15px;
     }
     
-    .argument-nav {
+    .menu-argumentos {
         grid-template-columns: 1fr;
     }
     
-    .header h1 {
+    .topo h1 {
         font-size: 2rem;
     }
     
-    .header h2 {
+    .topo h2 {
         font-size: 1.1rem;
     }
 }
