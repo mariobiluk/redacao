@@ -1,0 +1,281 @@
+/* Cores temáticas - poluição plástica e meio ambiente */
+:root {
+    --azul-escuro: #0D47A1;
+    --azul-poluicao: #2196F3;
+    --verde-escuro: #1B5E20;
+    --verde-agua: #4DB6AC;
+    --cinza-poluição: #607D8B;
+    --laranja: #FF5722;
+    --cinza-claro: #ECEFF1;
+    --branco: #FFFFFF;
+    --preto: #263238;
+}
+
+/* Reset e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--cinza-claro);
+    color: var(--preto);
+    line-height: 1.6;
+    max-width: 390px;
+    margin: 0 auto;
+    min-height: 844px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* Botão de voltar */
+.back-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background-color: var(--azul-poluicao);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+    background-color: var(--laranja);
+}
+
+/* Cabeçalho */
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 40px;
+}
+
+.header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.header h2 {
+    font-size: 1.1rem;
+    color: var(--cinza-poluição);
+    font-weight: 600;
+}
+
+/* Seção do cartaz */
+.poster-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.poster-image {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid var(--verde-agua);
+}
+
+/* Navegação de argumentos */
+.argument-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.argument-btn {
+    background-color: var(--azul-poluicao);
+    color: white;
+    padding: 12px 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.argument-btn:nth-child(3n+1) {
+    background-color: var(--verde-agua);
+    color: var(--preto);
+}
+
+.argument-btn:nth-child(3n+2) {
+    background-color: var(--cinza-poluição);
+}
+
+.argument-btn:nth-child(3n+3) {
+    background-color: var(--laranja);
+}
+
+.argument-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+/* Cards de argumentos */
+.arguments-section {
+    margin-top: 20px;
+}
+
+.argument-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--azul-poluicao);
+    display: none;
+}
+
+.argument-card:target {
+    display: block;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.argument-card h3 {
+    color: var(--azul-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.argument-card p, .argument-card ul {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--preto);
+    margin-bottom: 15px;
+}
+
+.argument-card blockquote {
+    font-style: italic;
+    border-left: 3px solid var(--verde-agua);
+    padding-left: 15px;
+    margin: 15px 0;
+    color: var(--cinza-poluição);
+}
+
+.argument-card blockquote footer {
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 5px;
+    color: var(--azul-escuro);
+}
+
+.back-to-top {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--azul-poluicao);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--laranja);
+}
+
+/* Seção de problemas */
+.problems-section {
+    margin-top: 30px;
+}
+
+.problems-section h3 {
+    color: var(--azul-escuro);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+.problem-card {
+    background-color: var(--branco);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-top: 4px solid var(--verde-agua);
+}
+
+.problem-card h4 {
+    color: var(--azul-escuro);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.problem-card ul {
+    padding-left: 20px;
+}
+
+.problem-card li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    color: var(--azul-escuro);
+    font-size: 0.9rem;
+}
+
+footer p:first-child {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 390px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .argument-nav {
+        grid-template-columns: 1fr;
+    }
+    
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header h2 {
+        font-size: 1rem;
+    }
+    
+    .argument-btn {
+        font-size: 0.9rem;
+    }
+}
